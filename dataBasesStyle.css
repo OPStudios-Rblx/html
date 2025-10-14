@@ -1,0 +1,43 @@
+body{
+    background-color:rgb(173, 215, 230);
+    font-family: 'Orbitron','Times New Roman',sans-serif;
+}
+
+.welcome-text {
+    color: rgb(60,60,60);
+    text-align: center;   
+    font-size: x-large;
+}
+
+.underline-bar {
+  height: 5px;                 
+  width: 1080px;               
+  background-color:rgb(60,60,60);      
+  margin: 0 auto;     
+}
+
+.main-container {
+    display:  flex;
+    flex-direction: row;
+}
+
+.button-container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+}
+
+.button {
+    width: 90px;
+}
+
+#exit-button {
+    width: 90px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 25px 25px 0px 0px;
+}
+
