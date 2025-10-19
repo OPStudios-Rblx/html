@@ -21,18 +21,63 @@
             <img src="databases_Off.png" class="button">
             <img src="documentation_Off.png" class="button">
             <img src="devTeam_Off.png" class="button">
-            <script src="./buttons-javascript.js"defer></script>
         </div> 
         <div class="concept-container">    
-            <div class="input-1"></div>
-            <div class="input-2"></div>
-            <div class="not-gate"></div>
-            <div class="and-gate"></div>
-            <div class="or-gate"></div>
-            <div class="output"></div>
-            
-            
+            <h1 class="concept-name">Half Adder Circuit</h1>
+            <div class="wire-row">
+                <div class="box input">
+                     <div class="input-button-bg">
+                        <div class="input-button"></div>
+                        <p>OFF</p>
+                    </div>   
+                </div>        
+                <div class="wire-column">
+                    <div class="wire"></div>
+                    <div class="wire wire-to-AND"></div>
+                 </div>                         
+                <div class="box gate">
+                    <img src="XOR.png" class="gate-icon">
+                    <p>XOR Gate</p>
+                </div>
+                <div class="wire"></div>
+                <div class="box output">
+                    <p>OUTPUT</p>
+                </div>  
+            </div>
 
-        </div>
+             <div class="wire-row">
+                <div class="box input">
+                     <div class="input-button-bg">
+                        <div class="input-button"></div>
+                        <p>OFF</p>
+                    </div>   
+                </div>        
+                <div class="wire-column">
+                    <div class="wire  wire-to-XOR"></div>
+                    <div class="wire"></div>
+                 </div>                         
+                <div class="box gate">
+                    <img src="AND.png" class="gate-icon">
+                    <p>AND Gate</p>
+                </div>
+                <div class="wire"></div>
+                <div class="box output">
+                    <p>OUTPUT</p>
+                </div>  
+            </div>
+            <div class="adder-container">
+                <div class="adder-visual">
+                    <p>0</p>
+                    <p>+</p>
+                    <p>0</p>
+                    <p>=</p>
+                    <p>0</p>
+                </div> 
+            </div>
+           
+        </div>      
+    </div>
+    <script src="./menu-buttons-javascript.js"defer></script>
+    <script src="./concepts-buttons-javascript.js"defer></script>   
 </body>
 </html>
