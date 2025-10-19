@@ -33,6 +33,178 @@ body{
     width: 90px;
 }
 
+.concept-container {
+    margin: 50px auto;
+    background-color: white; 
+    border: 0.5vw solid black; /* scales with viewport */
+    height: 75vh;              /* 60% of viewport height */
+    width: 90%;                /* 90% of parent/body width */
+    max-width: 1250px;         /* optional cap */
+    min-width: 300px;   
+    position: relative;      
+    display: flex;        
+    flex-direction: column;   
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;         
+}
+
+
+.concept-name {
+    position: absolute;
+    top: 0;             /* relative to container height */
+    font-size: 3vw;       /* relative to viewport width */
+}
+
+.box {
+    height: 100px;
+    width: 100px;
+    border: 3px solid black;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.gate {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gate-icon {
+    height: 100px;
+    width: 100px;
+}
+
+.output-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.input-button-bg {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgb(128, 128, 128,0.5);
+    border: 2px solid black;
+    border-radius: 15px;
+    height: 30%;
+    width: 66px;
+}
+
+.input-button-bg p {
+    position: absolute; 
+    margin-left: 33px;
+    color: black;
+    font-size: 14px;
+    pointer-events: none; 
+    transition: transform 0.3s;
+}
+.input-button {
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    height: 100%;
+    width: 50%;
+    transition: transform 0.3s ease;
+}
+
+.wire-row {
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.wire-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px; /* space between the stacked wires */
+}
+
+.wire {
+    background-color: gray;
+    height: 10px;
+    width: 175px; /* adjust as needed */
+    border-radius: 5px;
+}
+
+.wire-to-AND {   
+    background-color: gray;
+    transform: rotate(25deg) scaleX(1.1) translate(15px,38px);
+}
+
+.wire-to-XOR {   
+    background-color: gray;
+    transform: rotate(-25deg) scaleX(1.1) translate(15px,-38px);
+}
+
+.input.active {
+    background-color: rgb(255, 225, 0)
+}
+
+.input-button-bg.active {
+    background-color: rgb(0, 255, 0)
+}
+
+.input-button-bg p.active {
+   transform: translateX(-33px);
+}
+
+.input-button.active {
+   transform: translateX(33px);
+}
+
+.output.active {
+    background-color: rgb(255, 225, 0);
+}
+
+.wire.active {
+    background-color: aqua;
+}
+
+/* .adder-visual {
+    position: absolute;
+    background-color: black;
+    height: 100px;
+    width: 925px;
+    top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+} */
+
+.adder-container {
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.adder-visual {
+    background-color: black;
+    height: 45%;                  
+    width: 53.2%;                      
+    max-width: 925px;               
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6vw;                    
+    border-radius: 1vw;             
+}
+
+
+.adder-visual p{
+  color: white;
+  font-size: 45px;
+}
 #exit-button {
     width: 90px;
     position: fixed;
