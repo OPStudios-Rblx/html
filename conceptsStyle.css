@@ -46,7 +46,8 @@ body{
     flex-direction: column;   
     justify-content: center;
     align-items: center;
-    flex-shrink: 0;         
+    flex-shrink: 0;
+    pointer-events: none;
 }
 
 
@@ -170,24 +171,13 @@ body{
     background-color: aqua;
 }
 
-/* .adder-visual {
-    position: absolute;
-    background-color: black;
-    height: 100px;
-    width: 925px;
-    top: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 100px;
-} */
-
 .adder-container {
     margin-left: 50px;
     display: flex;
     align-items: center;
     width: 100%;
 }
+
 .adder-visual {
     background-color: black;
     height: 45%;                  
@@ -198,8 +188,7 @@ body{
     align-items: center;
     gap: 6vw;                    
     border-radius: 1vw;             
-}
-
+}    
 
 .adder-visual p{
   color: white;
@@ -212,4 +201,5 @@ body{
     right: 0;
     margin: 25px 25px 0px 0px;
 }
+
 
