@@ -1,5 +1,5 @@
 body{
-    background-color:rgb(173, 215, 230,0.3);
+    background-color:rgb(173, 215, 230);
     font-family: 'Orbitron','Times New Roman',sans-serif;
 }
 
@@ -34,7 +34,7 @@ body{
 }
 
 .concept-container {
-    margin: 50px auto;
+    margin: 50px 0px 0px 125px;
     background-color: white; 
     border: 0.5vw solid black; /* scales with viewport */
     height: 75vh;              /* 60% of viewport height */
@@ -46,7 +46,7 @@ body{
     flex-direction: column;   
     justify-content: center;
     align-items: center;
-    flex-shrink: 0;
+    flex-shrink: 0;         
 }
 
 
@@ -117,6 +117,7 @@ body{
 
 .wire-row {
     margin-left: 50px;
+    margin-bottom: 10px;
     display: flex;
     align-items: center;
     width: 100%;
@@ -170,13 +171,16 @@ body{
     background-color: aqua;
 }
 
+.gate-icon.active {
+    background-color: rgb(255, 225, 0);
+}
+
 .adder-container {
     margin-left: 50px;
     display: flex;
     align-items: center;
     width: 100%;
 }
-
 .adder-visual {
     background-color: black;
     height: 45%;                  
@@ -187,12 +191,13 @@ body{
     align-items: center;
     gap: 6vw;                    
     border-radius: 1vw;             
-}    
+}
 
 .adder-visual p{
   color: white;
   font-size: 45px;
 }
+
 #exit-button {
     width: 90px;
     position: fixed;
@@ -200,6 +205,4 @@ body{
     right: 0;
     margin: 25px 25px 0px 0px;
 }
-
-
 
