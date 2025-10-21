@@ -4,6 +4,7 @@ const outputs = document.querySelectorAll(".output");
 const wires = document.querySelectorAll(".wire");
 const container2 = document.querySelector(".adder-visual");
 const digits = container2.querySelectorAll("p");
+const gates = document.querySelectorAll(".gate");
 
 inputbuttons.forEach(setupButton);
 
@@ -12,16 +13,16 @@ function setupButton(button, index) {
         button.addEventListener('click', function() {
             inputStates[index] = !inputStates[index];
 
-            button.classList.toggle('active', inputStates[index]);
+            button.classList.toggle("active", inputStates[index]);
             const bg = button.parentElement;
             const container = bg.parentElement;
             const text = bg.querySelector("p");
 
-            bg.classList.toggle('active', inputStates[index]);
-            container.classList.toggle('active', inputStates[index]);
+            bg.classList.toggle("active", inputStates[index]);
+            container.classList.toggle("active", inputStates[index]);
 
             if (text) {
-                text.classList.toggle('active', inputStates[index]);
+                text.classList.toggle("active", inputStates[index]);
                 text.textContent = inputStates[index] ? "ON" : "OFF";
                 
             }
@@ -37,11 +38,11 @@ function updateOutputs() {
    
     outputs.forEach((output, i) => {
         if (allOn && i === 1) {
-            output.classList.toggle('active');
+            output.classList.toggle("active");
         } else if (anyOn && !allOn && i === 0) {
-            output.classList.toggle('active');
+            output.classList.toggle("active");
         } else {
-            output.classList.remove('active');
+            output.classList.remove("active");
         }
     });
 
@@ -53,15 +54,25 @@ function updateOutputs() {
 
     wires.forEach((wire, i) => {
         if (i === 2) {
-            wire.classList.toggle('active', (firstOutput || secondOutput) && !allOn);
+            wire.classList.toggle("active", (firstOutput || secondOutput) && !allOn);
         } else if (firstOutputwires.includes(i)) {
-            wire.classList.toggle('active', firstOutput);
+            wire.classList.toggle("active", firstOutput);
         } else if (secondOutputwires.includes(i)) {
-            wire.classList.toggle('active', secondOutput);
+            wire.classList.toggle("active", secondOutput);
         } else if(allOn) {
-            wire.classList.toggle('active',true);
+            wire.classList.toggle("active",true);
         }else {
-            wire.classList.remove('active');
+            wire.classList.remove("active");
+        }
+    });
+
+    gates.forEach((gate,i) => {
+        if (anyOn && i === 0) {
+           gate.classList.toggle("active");
+        }else if (allOn & i === 1 ) {
+            gate.classList.toggle("active");
+        }else {
+            gate.classList.remove("active");
         }
     });
 
